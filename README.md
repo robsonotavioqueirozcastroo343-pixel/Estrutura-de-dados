@@ -3,13 +3,13 @@
 Este repositório contém a resolução da atividade prática de manipulação de estruturas de dados (listas) desenvolvida em ambiente Google Colab para a disciplina de Estrutura de Dados / Algoritmos.
 
 ## 👥 Integrantes da Dupla
-* **Integrante 1:** [Seu Nome Completo] - [Seu RGM/Matrícula]
-* **Integrante 2:** [Nome do seu Colega] - [RGM/Matrícula do Colega]
+* **Integrante 1:** Robson Otávio Queiroz Castro
+* **Integrante 2:** [Nome do seu Colega]
 
 ## 🎯 Objetivo da Atividade
 O objetivo principal é criar uma lista inicial em Python e realizar uma série de operações sequenciais de manipulação, utilizando a função nativa `id()` para investigar a identidade e o comportamento dos objetos na memória, compreendendo os conceitos de **mutabilidade** e **referência**.
 
-As operações executadas foram:
+As operações investigadas foram:
 1. Exibir a lista inicial e seu `id()`;
 2. Adicionar um elemento ao final com `append()`;
 3. Inserir um elemento em uma posição específica com `insert()`;
@@ -17,44 +17,6 @@ As operações executadas foram:
 5. Remover um elemento pela posição utilizando `pop()`;
 6. Alterar o valor de um elemento existente;
 7. Limpar todos os elementos utilizando `clear()`.
-
----
-
-## 💻 Código Desenvolvido
-
-```python
-def mostrar_estado(nome_operacao, lst):
-    print(f'=== {nome_operacao} ===')
-    print(f'Conteúdo atual da lista: {lst}')
-    print(f'id() da lista: {id(lst)}')
-    print('Detalhes dos elementos (Índice | Valor | id()):')
-    for i, val in enumerate(lst):
-        print(f'  [{i}] -> Valor: {val} | id(): {id(val)}')
-    print('-' * 40 + '\n')
-
-# Ponto de partida
-lista = [10, 20, 30]
-mostrar_estado('1. Lista Inicial', lista)
-
-# Operações
-lista.append(40)
-mostrar_estado('2. Operação append(40)', lista)
-
-lista.insert(1, 15)  
-mostrar_estado('3. Operação insert(1, 15)', lista)
-
-lista.remove(20)  
-mostrar_estado('4. Operação remove(20)', lista)
-
-lista.pop(2)  
-mostrar_estado('5. Operação pop(2)', lista)
-
-lista[0] = 99  
-mostrar_estado('6. Alteração de valor lista[0] = 99', lista)
-
-lista.clear()
-mostrar_estado('7. Operação clear()', lista)
-```
 
 ---
 
@@ -83,4 +45,3 @@ mostrar_estado('7. Operação clear()', lista)
 ## 🛠️ Tecnologias Utilizadas
 * **Python 3**
 * **Google Colab**
-
