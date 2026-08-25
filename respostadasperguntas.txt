@@ -1,8 +1,25 @@
-## 📊 Análise dos Resultados
+# Atividade Prática: Manipulação de Listas e Investigação de Identidade em Python
 
-Nesta seção, estão documentadas as conclusões obtidas através da investigação da identidade dos objetos na memória utilizando a função `id()`.
+Resolução da atividade prática de manipulação de estruturas de dados (listas) desenvolvida em ambiente Google Colab para a disciplina de Estrutura de Dados / Algoritmos.
+
+## 👤 Integrante
+* Robson Otávio Queiroz Castro
+
+## 🎯 Objetivo da Atividade
+O objetivo principal é criar uma lista inicial em Python e realizar uma série de operações sequenciais de manipulação, utilizando a função nativa `id()` para investigar a identidade e o comportamento dos objetos na memória, compreendendo os conceitos de **mutabilidade** e **referência**.
+
+As operações investigadas foram:
+1. Exibir a lista inicial e seu `id()`;
+2. Adicionar um elemento ao final com `append()`;
+3. Inserir um elemento em uma posição específica com `insert()`;
+4. Remover um elemento pelo valor utilizando `remove()`;
+5. Remover um elemento pela posição utilizando `pop()`;
+6. Alterar o valor de um elemento existente;
+7. Limpar todos os elementos utilizando `clear()`.
 
 ---
+
+## 📊 Análise dos Resultados
 
 ### 🔹 a) O id() da lista mudou durante as operações? O que isso indica?
 > **Não.** O `id()` da lista permaneceu exatamente o mesmo em todas as etapas.
@@ -14,7 +31,7 @@ Nesta seção, estão documentadas as conclusões obtidas através da investiga�
 ### 🔹 b) O que aconteceu com os elementos quando novos valores foram adicionados?
 > Quando novos elementos foram adicionados (`append` e `insert`), a lista expandiu sua estrutura interna para referenciar os `id()` desses novos objetos. 
 > 
-> 🔄 *Os elementos que já estavam na lista e ficaram posicionados após o local da inserção tiveram apenas os seus **índices deslocados**, mantendo os seus `id()` originais intactos.*
+> 🔄 *Os elementos que já estavam na lista e ficaram posicionados após o local da inserção tiveram apenas os seus **índices deslocados**, mantendo os seus `id()` originais de memória.*
 
 ---
 
@@ -28,7 +45,7 @@ Nesta seção, estão documentadas as conclusões obtidas através da investiga�
 ### 🔹 d) Ao alterar um elemento da lista, o id() desse elemento permaneceu igual? Explique o resultado observado.
 > **Não, o `id()` mudou.** 
 > 
-> 📌 *Isso ocorre porque números inteiros (`int`) são **imutáveis** em Python. Não é possível alterar o valor de um inteiro internamente. Ao executar `lista = 99`, o Python descarta a referência antiga do índice `0` e faz esse índice apontar para o endereço de memória do novo objeto criado (o número `99`).*
+> 📌 *Isso ocorre porque números inteiros (`int`) são **imutáveis** em Python. Não é possível alterar o valor de um inteiro internamente. Ao executar `lista[0] = 99`, o Python descarta a referência antiga do índice `0` e faz esse índice apontar para o endereço de memória do novo objeto criado (o número `99`).*
 
 ---
 
@@ -42,4 +59,10 @@ Nesta seção, estão documentadas as conclusões obtidas através da investiga�
 | Operação | Comportamento na Memória | Impacto no Código |
 | :--- | :--- | :--- |
 | **Alterar o Conteúdo** | Atualiza os elementos no mesmo espaço de memória, **mantendo o `id()`** da lista original. | Qualquer outra variável que aponte para essa lista verá as modificações em tempo real. |
-| **Criar Nova Lista** | Aloca um espaço totalmente inédito na memória (ex: `lista =`), gerando um **novo `id()`**. | Rompe totalmente o vínculo com os dados antigos e com outras variáveis que apontavam para a lista anterior. |
+| **Criar Nova Lista** | Aloca um espaço totalmente inédito na memória (ex: `lista = [1, 2, 3]`), gerando um **novo `id()`**. | Rompe totalmente o vínculo com os dados antigos e com outras variáveis que apontavam para a lista anterior. |
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+* **Python 3**
+* **Google Colab**
