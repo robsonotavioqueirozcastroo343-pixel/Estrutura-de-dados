@@ -37,4 +37,4 @@ As operações investigadas foram:
 
 ## 🛠️ Tecnologias Utilizadas
 * **Python 3**
-* **Google Colab**
+* **VS Code**
